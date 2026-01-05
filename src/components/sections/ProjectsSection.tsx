@@ -7,7 +7,7 @@ export default function ProjectsSection() {
   const { data } = useLanguage();
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-6 bg-background">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,23 +24,8 @@ export default function ProjectsSection() {
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
-          {/* Projects Background */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-16 rounded-2xl overflow-hidden shadow-lg h-64 md:h-80"
-          >
-            <img
-              src="/images/projects-section-bg.png"
-              alt="Projects Background"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.projects.items.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -48,26 +33,25 @@ export default function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-white rounded-lg overflow-hidden shadow-sm border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-2 flex flex-col"
+                className="group bg-card rounded-lg overflow-hidden shadow-sm border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
               >
                 {/* Project Header */}
-                <div className="bg-gradient-to-r from-primary to-secondary p-6 text-white">
+                <div className="bg-primary p-4 text-white">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-sm opacity-90">{project.description}</p>
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6 flex-grow flex flex-col">
+                <div className="p-4 flex-grow flex flex-col">
                   {/* Technologies */}
-                  <div className="mb-6 flex-grow">
-                    <p className="text-sm font-semibold text-muted-foreground mb-3">
+                  <div className="mb-2 flex-grow">
+                    <p className="text-sm font-medium text-muted-foreground mb-2">
                       Tecnologias:
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 bg-primary/10 text-primary text-xs rounded font-medium"
+                          className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
                         >
                           {tech}
                         </span>
@@ -90,21 +74,6 @@ export default function ProjectsSection() {
                       >
                         <ExternalLink size={16} className="mr-2" />
                         Ver
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1"
-                      asChild
-                    >
-                      <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github size={16} className="mr-2" />
-                        Code
                       </a>
                     </Button>
                   </div>

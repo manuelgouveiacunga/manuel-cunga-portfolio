@@ -19,7 +19,6 @@ export default function ContactSection() {
       const email = formData.get("email");
       const message = formData.get("message");
 
-      // Simulate form submission
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast.success("Mensagem enviada com sucesso!");

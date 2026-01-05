@@ -16,23 +16,13 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-20 flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen pt-6 flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/images/hero-background.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/85 z-10" />
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px] z-10" />
 
       {/* Content */}
-      <div className="container relative z-20 py-20">
+      <div className="container relative z-20 py-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +34,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-primary"
+            className="text-5xl md:text-6xl font-bold mb-12 text-primary"
           >
             {data.name}
           </motion.h1>
@@ -84,6 +74,7 @@ export default function HeroSection() {
               {data.hero.cta}
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
+
             <Button
               size="lg"
               variant="outline"
@@ -108,6 +99,7 @@ export default function HeroSection() {
             >
               <Mail size={20} />
             </a>
+
             <a
               href={data.linkedIn}
               target="_blank"
@@ -117,6 +109,7 @@ export default function HeroSection() {
             >
               <Linkedin size={20} />
             </a>
+
             <a
               href={data.portfolio}
               target="_blank"
@@ -129,22 +122,6 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-sm text-muted-foreground">
-            Scroll
-          </span>
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

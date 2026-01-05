@@ -13,7 +13,6 @@ export default function Navigation() {
     { id: "experience", label: language === "pt" ? "Experiência" : "Experience" },
     { id: "skills", label: language === "pt" ? "Competências" : "Skills" },
     { id: "projects", label: language === "pt" ? "Projetos" : "Projects" },
-    { id: "recommendations", label: language === "pt" ? "Recomendações" : "Recommendations" },
     { id: "contact", label: language === "pt" ? "Contato" : "Contact" },
   ];
 
@@ -34,7 +33,7 @@ export default function Navigation() {
             onClick={() => scrollToSection("hero")}
             className="text-xl font-bold text-primary hover:text-secondary transition-colors"
           >
-            MC
+            Manuel Gouveia Cunga
           </button>
         </div>
 
