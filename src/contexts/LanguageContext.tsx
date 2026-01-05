@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { Language, portfolioData } from "@/lib/portfolio-data";
+import { Language, portfolioData } from "@/lib/data/portfolio-data";
 
 interface LanguageContextType {
   language: Language;
@@ -7,7 +7,9 @@ interface LanguageContextType {
   data: typeof portfolioData.pt;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("pt");
