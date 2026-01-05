@@ -1,10 +1,12 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { useState } from "react";
 
 export default function Navigation() {
   const { language, setLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -53,7 +55,15 @@ export default function Navigation() {
 
         {/* Language Switcher & Mobile Menu */}
         <div className="flex items-center gap-4">
-          <div className="flex gap-2">
+      <div className="flex gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="w-10 h-10 p-0"
+            >
+              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+            </Button>
             <Button
               variant={language === "pt" ? "default" : "outline"}
               size="sm"

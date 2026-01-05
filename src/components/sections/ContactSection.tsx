@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 export default function ContactSection() {
   const { data } = useLanguage();
@@ -13,16 +14,32 @@ export default function ContactSection() {
     e.preventDefault();
     setIsLoading(true);
 
+    const form = e.currentTarget;
     try {
-      const formData = new FormData(e.currentTarget);
+      const formData = new FormData(form);
       const name = formData.get("name");
       const email = formData.get("email");
       const message = formData.get("message");
+      
+      console.log("Formulário enviado:", { name, email, message });
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("EmailJS configurations missing");
+      }
+
+      await emailjs.sendForm(
+        serviceId,
+        templateId,
+        form,
+        publicKey
+      );
 
       toast.success("Mensagem enviada com sucesso!");
-      e.currentTarget.reset();
+      form.reset();
     } catch (error) {
       toast.error("Erro ao enviar mensagem");
     } finally {
