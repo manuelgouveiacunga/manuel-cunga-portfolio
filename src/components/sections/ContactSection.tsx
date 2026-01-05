@@ -161,7 +161,7 @@ export default function ContactSection() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               onSubmit={handleSubmit}
-              className="space-y-6 bg-white rounded-lg p-8 shadow-sm border border-border"
+              className="space-y-6 bg-card rounded-lg p-8 shadow-lg border border-border"
             >
               <div>
                 <label

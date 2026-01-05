@@ -18,8 +18,19 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen pt-6 flex items-center justify-center overflow-hidden"
     >
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 opacity-10 dark:opacity-10"
+        style={{
+          backgroundImage: 'url("/hero-background.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px] z-10" />
+      <div className="absolute inset-30 bg-background/80 backdrop-blur-[2px] z-10" />
 
       {/* Content */}
       <div className="container relative z-20 py-6">

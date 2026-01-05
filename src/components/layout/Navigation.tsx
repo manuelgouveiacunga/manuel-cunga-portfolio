@@ -27,7 +27,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -65,18 +65,18 @@ export default function Navigation() {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </Button>
             <Button
-              variant={language === "pt" ? "default" : "outline"}
+              variant={language === "pt" ? "default" : "ghost"}
               size="sm"
               onClick={() => setLanguage("pt")}
-              className="w-10 h-10 p-0"
+              className={`w-10 h-10 p-0 ${language === "pt" ? "" : "text-muted-foreground hover:text-primary"}`}
             >
               PT
             </Button>
             <Button
-              variant={language === "en" ? "default" : "outline"}
+              variant={language === "en" ? "default" : "ghost"}
               size="sm"
               onClick={() => setLanguage("en")}
-              className="w-10 h-10 p-0"
+              className={`w-10 h-10 p-0 ${language === "en" ? "" : "text-muted-foreground hover:text-primary"}`}
             >
               EN
             </Button>
