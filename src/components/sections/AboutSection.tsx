@@ -5,7 +5,10 @@ export default function AboutSection() {
   const { data } = useLanguage();
 
   return (
-    <section id="about" className="py-12 bg-gradient-to-b from-muted/50 to-background">
+    <section
+      id="about"
+      className="py-12 bg-gradient-to-b from-muted/50 to-background"
+    >
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,17 +40,27 @@ export default function AboutSection() {
               </p>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 justify-items-center">
-                <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-border w-40">
-                  <div className="text-3xl font-bold text-secondary mb-2">3+</div>
-                  <p className="text-sm text-muted-foreground">Anos de Experiência</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 w-full justify-items-center">
+                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-[200px] sm:w-40">
+                  <div className="text-3xl font-bold text-secondary mb-2">
+                    3+
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Anos de Experiência
+                  </p>
                 </div>
-                <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-border w-40">
-                  <div className="text-3xl font-bold text-secondary mb-2">10+</div>
-                  <p className="text-sm text-muted-foreground">Projetos Completos</p>
+                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-[200px] sm:w-40">
+                  <div className="text-3xl font-bold text-secondary mb-2">
+                    10+
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Projetos Completos
+                  </p>
                 </div>
-                <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-border w-40">
-                  <div className="text-3xl font-bold text-secondary mb-2">500+</div>
+                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-[200px] sm:w-40">
+                  <div className="text-3xl font-bold text-secondary mb-2">
+                    500+
+                  </div>
                   <p className="text-sm text-muted-foreground">Conexões</p>
                 </div>
               </div>

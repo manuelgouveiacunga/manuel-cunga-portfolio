@@ -5,7 +5,10 @@ export default function SkillsSection() {
   const { data } = useLanguage();
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-muted/30 to-background">
+    <section
+      id="skills"
+      className="py-12 md:py-20 bg-gradient-to-b from-muted/30 to-background"
+    >
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,7 +19,7 @@ export default function SkillsSection() {
         >
           {/* Section Title */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
               {data.skills.title}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
@@ -31,13 +34,13 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg p-6 shadow-sm border border-border hover:shadow-md transition-shadow duration-300"
+                className="bg-card rounded-lg p-6 shadow-sm border border-border hover:shadow-md transition-shadow duration-300"
               >
                 <h3 className="text-xl font-bold text-primary mb-4">
                   {category.name}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
+                  {category.skills.map(skill => (
                     <motion.span
                       key={skill}
                       whileHover={{ scale: 1.05 }}
