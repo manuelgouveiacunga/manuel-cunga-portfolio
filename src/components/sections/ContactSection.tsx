@@ -20,7 +20,7 @@ export default function ContactSection() {
       const name = formData.get("name");
       const email = formData.get("email");
       const message = formData.get("message");
-      
+
       console.log("Formulário enviado:", { name, email, message });
 
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -31,12 +31,7 @@ export default function ContactSection() {
         throw new Error("EmailJS configurations missing");
       }
 
-      await emailjs.sendForm(
-        serviceId,
-        templateId,
-        form,
-        publicKey
-      );
+      await emailjs.sendForm(serviceId, templateId, form, publicKey);
 
       toast.success("Mensagem enviada com sucesso!");
       form.reset();
@@ -48,7 +43,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-background to-muted/30">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-b from-background to-muted/30"
+    >
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -175,7 +173,7 @@ export default function ContactSection() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
                   placeholder="Seu nome"
                 />
               </div>
@@ -192,7 +190,7 @@ export default function ContactSection() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
                   placeholder="seu@email.com"
                 />
               </div>
@@ -209,7 +207,7 @@ export default function ContactSection() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 resize-none"
                   placeholder="Sua mensagem aqui..."
                 />
               </div>
@@ -217,11 +215,9 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold"
+                className="w-full py-6 bg-primary hover:bg-primary/90 text-white font-semibold"
               >
-                {isLoading
-                  ? "Enviando..."
-                  : data.contact.cta}
+                {isLoading ? "Enviando..." : data.contact.cta}
               </Button>
             </motion.form>
           </div>

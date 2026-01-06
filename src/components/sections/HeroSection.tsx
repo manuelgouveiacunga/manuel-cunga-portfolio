@@ -16,21 +16,21 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-6 flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] pt-6 flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-10 dark:opacity-10"
         style={{
           backgroundImage: 'url("/hero-background.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       />
 
       {/* Overlay */}
-      <div className="absolute inset-30 bg-background/80 backdrop-blur-[2px] z-10" />
+      <div className="absolute inset-40 bg-background/80 backdrop-blur-[2px] z-10" />
 
       {/* Content */}
       <div className="container relative z-20 py-6">
@@ -38,14 +38,14 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-3xl mx-auto text-center px-4"
         >
           {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold mb-12 text-primary"
+            className="text-3xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12 text-primary"
           >
             {data.name}
           </motion.h1>
@@ -55,7 +55,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl font-semibold text-secondary mb-4"
+            className="text-lg sm:text-xl md:text-2xl font-semibold text-secondary mb-4"
           >
             {data.title}
           </motion.p>
