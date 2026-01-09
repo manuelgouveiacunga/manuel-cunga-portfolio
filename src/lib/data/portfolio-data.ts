@@ -82,7 +82,7 @@ export const portfolioData = {
           id: 2,
           title: "SwiftDrop - FAQs",
           technologies: ["React.js", "JS", "Tailwind CSS", "Git"],
-          link: "https://github.com/manuelgouveiacunga/faqs_swiftdrop",
+          link: "https://faqs-swiftdrop.onrender.com",
         },
         {
           id: 3,
