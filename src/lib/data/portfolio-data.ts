@@ -114,6 +114,12 @@ export const portfolioData = {
           technologies: ["HTML 5", "CSS", "JS", "Git"],
           link: "https://manuelgouveiacunga.github.io/ngolavoz/",
         },
+         {
+          id: 8,
+          title: "KALA APP - Mensagens Anónimas",
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel"],
+          link: "https://kala-app-ao.vercel.app/",
+        }
       ],
     },
 
@@ -268,6 +274,12 @@ export const portfolioData = {
           technologies: ["HTML 5", "CSS", "JS", "Git"],
           link: "https://manuelgouveiacunga.github.io/ngolavoz/",
         },
+        {
+          id: 8,
+          title: "KALA APP - anonymous posts",
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel"],
+          link: "https://kala-app-ao.vercel.app/",
+        }
       ],
     },
 
