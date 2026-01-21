@@ -21,7 +21,7 @@ export default function ProjectsSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               {data.projects.title}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <div className="h-1 w-20 bg-linear-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           {/* Projects Grid */}
@@ -48,7 +48,7 @@ export default function ProjectsSection() {
                       Tecnologias:
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
+                      {project.technologies.map(tech => (
                         <span
                           key={tech}
                           className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"

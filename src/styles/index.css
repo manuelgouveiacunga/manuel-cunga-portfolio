@@ -177,7 +177,7 @@
 
   /* Portfolio-specific styles */
   .section-divider {
-    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+    @apply h-px bg-linear-to-r from-transparent via-border to-transparent;
   }
 
   .fade-in {
@@ -193,7 +193,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
 
   .hover-lift {

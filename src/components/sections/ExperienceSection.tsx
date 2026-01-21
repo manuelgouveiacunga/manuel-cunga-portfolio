@@ -20,7 +20,7 @@ export default function ExperienceSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               {data.experience.title}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <div className="h-1 w-20 bg-linear-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           {/* Experience Items */}

@@ -52,11 +52,11 @@ export const portfolioData = {
       categories: [
         {
           name: "Desenvolvimento Web",
-          skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Node.js"],
+          skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Material UI", "Next.js", "Node.js"],
         },
         {
           name: "Ferramentas & Plataformas",
-          skills: ["Git", "GitHub", "Vite", "REST APIs", "Figma"],
+          skills: ["Git", "GitHub", "Vite", "REST APIs", "Figma", "EmailJS", "Vercel", "Render", "NPM", "Yarn", "Firebase"],
         },
         {
           name: "Desenvolvimento Mobile",
@@ -117,7 +117,7 @@ export const portfolioData = {
          {
           id: 8,
           title: "KALA APP - Mensagens Anónimas",
-          technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel"],
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel", "Firebase"],
           link: "https://kala-app-ao.vercel.app/",
         }
       ],
@@ -184,15 +184,15 @@ export const portfolioData = {
       categories: [
         {
           name: "Web Development",
-          skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Node.js"],
+          skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS","Material UI", "Next.js", "Node.js"],
         },
         {
           name: "Tools & Platforms",
-          skills: ["Git", "GitHub", "Vite", "REST APIs", "Figma"],
+          skills: ["Git", "GitHub", "Vite", "REST APIs", "Figma", "EmailJS", "Vercel", "Render", "NPM", "Yarn", "Firebase"],
         },
         {
           name: "Mobile Development",
-          skills: ["Flutter", "Dart", "React Native"],
+          skills: ["Flutter", "Dart"],
         },
         {
           name: "Management & Methodologies",
@@ -277,7 +277,7 @@ export const portfolioData = {
         {
           id: 8,
           title: "KALA APP - anonymous posts",
-          technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel"],
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "Vercel", "Firebase"],
           link: "https://kala-app-ao.vercel.app/",
         }
       ],

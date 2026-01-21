@@ -33,7 +33,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <button
             onClick={() => scrollToSection("hero")}
             className="text-lg md:text-xl font-bold text-primary hover:text-secondary transition-colors truncate max-w-[150px] sm:max-w-none"

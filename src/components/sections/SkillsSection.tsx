@@ -7,7 +7,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-12 md:py-20 bg-gradient-to-b from-muted/30 to-background"
+      className="py-12 md:py-20 bg-linear-to-b from-muted/30 to-background"
     >
       <div className="container">
         <motion.div
@@ -22,7 +22,7 @@ export default function SkillsSection() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
               {data.skills.title}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <div className="h-1 w-20 bg-linear-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           {/* Skills Grid */}
@@ -44,7 +44,7 @@ export default function SkillsSection() {
                     <motion.span
                       key={skill}
                       whileHover={{ scale: 1.05 }}
-                      className="px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary font-semibold rounded-full border border-primary/20 hover:border-secondary hover:text-secondary transition-all duration-300 cursor-default"
+                      className="px-4 py-2 bg-linear-to-r from-primary/10 to-secondary/10 text-primary font-semibold rounded-full border border-primary/20 hover:border-secondary hover:text-secondary transition-all duration-300 cursor-default"
                     >
                       {skill}
                     </motion.span>

@@ -45,7 +45,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-b from-background to-muted/30"
+      className="py-20 bg-linear-to-b from-background to-muted/30"
     >
       <div className="container">
         <motion.div
@@ -63,7 +63,7 @@ export default function ContactSection() {
             <p className="text-lg text-muted-foreground mb-8">
               {data.contact.description}
             </p>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <div className="h-1 w-20 bg-linear-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           {/* Contact Grid */}
