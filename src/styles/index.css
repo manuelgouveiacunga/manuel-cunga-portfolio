@@ -199,4 +199,30 @@
   .hover-lift {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
+
+  /* Spotlight Hover Effect */
+  .spotlight-effect {
+    mix-blend-mode: screen;
+  }
+
+  .dark .spotlight-effect {
+    mix-blend-mode: screen;
+  }
+
+  /* Enhanced spotlight card styles for dark mode */
+  .spotlight-card {
+    @apply relative overflow-hidden rounded-lg bg-card border border-border/50 transition-all duration-300;
+  }
+
+  .dark .spotlight-card {
+    @apply bg-linear-to-br from-slate-900/80 to-slate-800/80 border border-slate-700/50 transition-all duration-300;
+  }
+
+  .spotlight-card:hover {
+    @apply border-accent/50 shadow-lg shadow-accent/15;
+  }
+
+  .dark .spotlight-card:hover {
+    @apply shadow-lg shadow-blue-500/25 border-blue-500/50;
+  }
 }

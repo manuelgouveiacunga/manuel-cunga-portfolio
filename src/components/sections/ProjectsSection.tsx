@@ -41,9 +41,9 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-4 flex-grow flex flex-col">
+                <div className="p-4 grow flex flex-col">
                   {/* Technologies */}
-                  <div className="mb-2 flex-grow">
+                  <div className="mb-2 grow">
                     <p className="text-sm font-medium text-muted-foreground mb-2">
                       Tecnologias:
                     </p>

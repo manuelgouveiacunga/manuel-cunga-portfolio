@@ -41,7 +41,7 @@ export default function AboutSection() {
 
               {/* Quick Stats */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 w-full justify-items-center">
-                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-[200px] sm:w-40">
+                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-50 sm:w-40">
                   <div className="text-3xl font-bold text-secondary mb-2">
                     3+
                   </div>
@@ -49,7 +49,7 @@ export default function AboutSection() {
                     Anos de Experiência
                   </p>
                 </div>
-                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-[200px] sm:w-40">
+                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-50 sm:w-40">
                   <div className="text-3xl font-bold text-secondary mb-2">
                     10+
                   </div>
@@ -57,7 +57,7 @@ export default function AboutSection() {
                     Projetos Completos
                   </p>
                 </div>
-                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-[200px] sm:w-40">
+                <div className="text-center p-4 bg-card rounded-lg shadow-sm border border-border w-full max-w-50 sm:w-40">
                   <div className="text-3xl font-bold text-secondary mb-2">
                     500+
                   </div>
