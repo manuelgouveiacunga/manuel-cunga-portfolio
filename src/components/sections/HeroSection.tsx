@@ -30,7 +30,7 @@ export default function HeroSection() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-40 bg-background/80 backdrop-blur-[2px] z-10" />
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px] z-10" />
 
       {/* Content */}
       <div className="container relative z-20 py-6">
@@ -40,6 +40,20 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center px-4"
         >
+          {/* Avatar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center mb-6"
+          >
+            <img
+              src="/icone-portfólio.png"
+              alt={`${data.name} - foto ou marca pessoal`}
+              className="w-30 h-30 md:w-32 md:h-32 rounded-full object-cover shadow-lg border border-border bg-background"
+            />
+          </motion.div>
+
           {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
