@@ -77,7 +77,7 @@ export default function ContactSection() {
               className="space-y-8"
             >
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-secondary text-white">
                     <Mail size={24} />
                   </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-secondary text-white">
                     <Phone size={24} />
                   </div>
@@ -113,7 +113,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-secondary text-white">
                     <MapPin size={24} />
                   </div>
