@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-12 bg-gradient-to-b from-muted/50 to-background"
+      className="py-12 bg-linear-to-b from-muted/50 to-background"
     >
       <div className="container">
         <motion.div
@@ -22,7 +22,7 @@ export default function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               {data.about.title}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            <div className="h-1 w-20 bg-linear-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           {/* Content Grid - tudo centralizado */}
