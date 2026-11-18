@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://sitemaps.org"
+        xmlns:image="http://google.com">
   <url>
-    <loc>https://manuel-cunga-portfolio.vercel.app/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <loc>https://vercel.app</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vercel.appprofile.jpg</image:loc>
+      <image:title>Manuel Gouveia Cunga - Analista de Teste e Desenvolvedor Front-end</image:title>
+      <image:caption>Manuel Gouveia Cunga, Analista de Teste (QA) e Desenvolvedor Front-end em Luanda, Angola</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vercel.appog-image.png</image:loc>
+      <image:title>Portfólio Manuel Gouveia Cunga</image:title>
+    </image:image>
   </url>
 </urlset>
